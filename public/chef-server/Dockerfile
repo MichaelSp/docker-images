@@ -1,14 +1,14 @@
 # -*- conf -*-
 
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 #TAG 12.0.0
 MAINTAINER Maciej Pasternacki <maciej@3ofcoins.net>
 
 EXPOSE 80 443
 VOLUME /var/opt/opscode
 
-ADD https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/precise/chef-server-core_12.0.0-1_amd64.deb /tmp/chef-server-core.deb
-ADD https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.16.4-1_amd64.deb /tmp/chef.deb
+ADD https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-server-core_12.1.0-1_amd64.deb /tmp/chef-server-core.deb
+ADD https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/10.04/x86_64/chef_12.3.0-1_amd64.deb /tmp/chef.deb
 
 RUN set -e -x ; \
     export DEBIAN_FRONTEND=noninteractive ; \
